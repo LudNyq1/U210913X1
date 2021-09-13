@@ -28,9 +28,9 @@ namespace ACME_Cars
                         Console.Clear();
                         Console.WriteLine($"Car-ID\t\tMake\t\tModel\t\tColor\t\tPrice");
                         Console.WriteLine("=======================================================================");
-                        foreach (Cars i in car)
+                        foreach (Cars k in car)
                         {
-                            Console.WriteLine($"ID:{car.IndexOf(i)}\t\t{i.Make}\t\t{i.Model}\t\t{i.Color}\t\t{i.Price}$\n");
+                            Console.WriteLine($"ID:{car.IndexOf(k)}\t\t{k.Make}\t\t{k.Model}\t\t{k.Color}\t\t{k.Price}$\n");
                         }
                         Console.ReadLine();
                         goto start;
@@ -60,9 +60,9 @@ namespace ACME_Cars
                         Console.Clear();
                         Console.WriteLine($"Car-ID\t\tMake\t\tModel\t\tColor\t\tPrice");
                         Console.WriteLine("=======================================================================");
-                        foreach (Cars i in car)
+                        foreach (Cars l in car)
                         {
-                            Console.WriteLine($"ID:{car.IndexOf(i)}\t\t{i.Make}\t\t{i.Model}\t\t{i.Color}\t\t{i.Price}$\n");
+                            Console.WriteLine($"ID:{car.IndexOf(l)}\t\t{l.Make}\t\t{l.Model}\t\t{l.Color}\t\t{l.Price}$\n");
                         }
 
                         Console.WriteLine("Enter car ID to edit:");
@@ -115,22 +115,22 @@ namespace ACME_Cars
                         Console.Clear();
                         Console.WriteLine($"Car-ID\t\tMake\t\tModel\t\tColor\t\tPrice");
                         Console.WriteLine("=======================================================================");
-                        foreach (Cars i in car)
+                        foreach (Cars j in car)
                         {
-                            Console.WriteLine($"ID:{car.IndexOf(i)}\t\t{i.Make}\t\t{i.Model}\t\t{i.Color}\t\t{i.Price}$\n");
+                            Console.WriteLine($"ID:{car.IndexOf(j)}\t\t{j.Make}\t\t{j.Model}\t\t{j.Color}\t\t{j.Price}$\n");
                         }
                         Console.WriteLine("Enter Car ID to remove:");
                         int i = Int32.Parse(Console.ReadLine());
-
-                        string temp = 
-
+                        string temp = $"{car[i].Make} {car[i].Model}";
                         car.RemoveAt(i);
-
-                        break;
+                        Console.WriteLine($"Removed {temp}");
+                        Console.ReadLine();
+                        goto start;
 
                     case "X":
                         Console.Clear();
                         break;
+
                     default:
                         Console.WriteLine("==================================");
                         Console.WriteLine($"ERROR: FAULTY INPUT \"{choice}\" (Press Enter)");
